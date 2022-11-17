@@ -22,27 +22,33 @@ struct ListsView: View {
     @StateObject var interactor: ListsInteractor
     
     var body: some View {
-        List(interactor.state.lists, id: \.id, rowContent: { list in
-            NavigationLink {
-                TodosView(
-                    interactor: TodosInteractor(
-                        todoStorageController: TodosStorageControllerImpl(listId: list.id)
+        List {
+            ForEach(interactor.state.lists, id: \.id) { list in
+                NavigationLink {
+                    TodosView(
+                        interactor: TodosInteractor(
+                            todoStorageController: TodosStorageControllerImpl(listId: list.id)
+                        )
                     )
-                )
-            } label: {
-                Text(list.title)
-            }
-        })
-            .navigationTitle("Lists")
-            .toolbar {
-                ToolbarItem(placement: .primaryAction) {
-                    Button {
-                        interactor.addList()
-                    } label: {
-                        ImageKit.Lists.add.systemImage
-                    }
+                } label: {
+                    Text(list.title)
                 }
             }
+            .onDelete { indexSet in
+                guard let index = indexSet.first else { return }
+                interactor.deleteList(id: interactor.state.lists[index].id)
+            }
+        }
+        .navigationTitle("Lists")
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Button {
+                    interactor.addList()
+                } label: {
+                    ImageKit.Lists.add.systemImage
+                }
+            }
+        }
     }
 }
 

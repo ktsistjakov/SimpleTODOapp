@@ -40,6 +40,10 @@ final class TodosInteractor: ObservableObject {
         todoStorageController.changeTitle(title, for: id)
     }
 
+    func deleteItem(by id: UUID) {
+        todoStorageController.deleteTodo(id)
+    }
+
     private func subscribe() {
         $state
             .receive(on: DispatchQueue.main)

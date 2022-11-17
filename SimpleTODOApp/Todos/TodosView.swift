@@ -34,6 +34,10 @@ struct TodosView: View {
                             changeTitleAction: { interactor.changeTitle($0, for: element.id) }
                         )
                     }
+                    .onDelete { indexSet in
+                        guard let index = indexSet.first else { return }
+                        interactor.deleteItem(by: interactor.state.todo[index].id)
+                    }
                 }
             }
 
@@ -45,6 +49,10 @@ struct TodosView: View {
                             title: element.title,
                             doneAction: { interactor.toggleTodo(element.id) }
                         )
+                    }
+                    .onDelete { indexSet in
+                        guard let index = indexSet.first else { return }
+                        interactor.deleteItem(by: interactor.state.done[index].id)
                     }
                 }
             }

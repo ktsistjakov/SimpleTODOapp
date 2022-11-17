@@ -13,6 +13,14 @@
 		B5622B5229263D9700F020FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5622B5129263D9700F020FC /* Preview Assets.xcassets */; };
 		B5622B5C29263D9700F020FC /* SimpleTODOAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B5B29263D9700F020FC /* SimpleTODOAppTests.swift */; };
 		B5622B7A29263FEB00F020FC /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B7929263FEB00F020FC /* ListView.swift */; };
+		B5622B7D2926461800F020FC /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B7C2926461800F020FC /* Storage.swift */; };
+		B5622B862926472700F020FC /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B802926472600F020FC /* Injected.swift */; };
+		B5622B872926472700F020FC /* InjectedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B812926472600F020FC /* InjectedValue.swift */; };
+		B5622B882926472700F020FC /* InjectionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B822926472600F020FC /* InjectionKey.swift */; };
+		B5622B892926472700F020FC /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B842926472700F020FC /* UserDefaults.swift */; };
+		B5622B8A2926472700F020FC /* KeyValueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B852926472700F020FC /* KeyValueStore.swift */; };
+		B5622B8C292647EF00F020FC /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B8B292647EF00F020FC /* Keys.swift */; };
+		B5622B9029264AA300F020FC /* SettingsKeyValueStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B8F29264AA300F020FC /* SettingsKeyValueStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,14 @@
 		B5622B5729263D9700F020FC /* SimpleTODOAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleTODOAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5622B5B29263D9700F020FC /* SimpleTODOAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTODOAppTests.swift; sourceTree = "<group>"; };
 		B5622B7929263FEB00F020FC /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		B5622B7C2926461800F020FC /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		B5622B802926472600F020FC /* Injected.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
+		B5622B812926472600F020FC /* InjectedValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectedValue.swift; sourceTree = "<group>"; };
+		B5622B822926472600F020FC /* InjectionKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectionKey.swift; sourceTree = "<group>"; };
+		B5622B842926472700F020FC /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		B5622B852926472700F020FC /* KeyValueStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueStore.swift; sourceTree = "<group>"; };
+		B5622B8B292647EF00F020FC /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		B5622B8F29264AA300F020FC /* SettingsKeyValueStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsKeyValueStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,11 +92,12 @@
 		B5622B4329263D9400F020FC /* SimpleTODOApp */ = {
 			isa = PBXGroup;
 			children = (
+				B5622B8D29264A8000F020FC /* Settings */,
 				B5622B4429263D9500F020FC /* SimpleTODOAppApp.swift */,
 				B5622B7929263FEB00F020FC /* ListView.swift */,
 				B5622B7B2926402500F020FC /* Storage */,
-				B5622B7429263F5500F020FC /* Model */,
 				B5622B7629263F9000F020FC /* Support */,
+				B5622B7E2926470500F020FC /* Common */,
 				B5622B7529263F7800F020FC /* Assets */,
 				B5622B5029263D9700F020FC /* Preview Content */,
 			);
@@ -103,14 +120,6 @@
 			path = SimpleTODOAppTests;
 			sourceTree = "<group>";
 		};
-		B5622B7429263F5500F020FC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				B5622B4829263D9500F020FC /* SimpleTODOApp.xcdatamodeld */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		B5622B7529263F7800F020FC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				B5622B4F29263D9700F020FC /* SimpleTODOApp.entitlements */,
+				B5622B8B292647EF00F020FC /* Keys.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -130,8 +140,54 @@
 		B5622B7B2926402500F020FC /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				B5622B7C2926461800F020FC /* Storage.swift */,
+				B5622B4829263D9500F020FC /* SimpleTODOApp.xcdatamodeld */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		B5622B7E2926470500F020FC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B5622B7F2926472600F020FC /* Dependency */,
+				B5622B832926472700F020FC /* KeyValueStore */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B5622B7F2926472600F020FC /* Dependency */ = {
+			isa = PBXGroup;
+			children = (
+				B5622B802926472600F020FC /* Injected.swift */,
+				B5622B812926472600F020FC /* InjectedValue.swift */,
+				B5622B822926472600F020FC /* InjectionKey.swift */,
+			);
+			path = Dependency;
+			sourceTree = "<group>";
+		};
+		B5622B832926472700F020FC /* KeyValueStore */ = {
+			isa = PBXGroup;
+			children = (
+				B5622B842926472700F020FC /* UserDefaults.swift */,
+				B5622B852926472700F020FC /* KeyValueStore.swift */,
+			);
+			path = KeyValueStore;
+			sourceTree = "<group>";
+		};
+		B5622B8D29264A8000F020FC /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B5622B8E29264AA300F020FC /* KeyValueStorage */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		B5622B8E29264AA300F020FC /* KeyValueStorage */ = {
+			isa = PBXGroup;
+			children = (
+				B5622B8F29264AA300F020FC /* SettingsKeyValueStorage.swift */,
+			);
+			path = KeyValueStorage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,9 +290,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5622B862926472700F020FC /* Injected.swift in Sources */,
 				B5622B4529263D9500F020FC /* SimpleTODOAppApp.swift in Sources */,
+				B5622B7D2926461800F020FC /* Storage.swift in Sources */,
 				B5622B4A29263D9500F020FC /* SimpleTODOApp.xcdatamodeld in Sources */,
+				B5622B892926472700F020FC /* UserDefaults.swift in Sources */,
+				B5622B882926472700F020FC /* InjectionKey.swift in Sources */,
 				B5622B7A29263FEB00F020FC /* ListView.swift in Sources */,
+				B5622B872926472700F020FC /* InjectedValue.swift in Sources */,
+				B5622B8A2926472700F020FC /* KeyValueStore.swift in Sources */,
+				B5622B9029264AA300F020FC /* SettingsKeyValueStorage.swift in Sources */,
+				B5622B8C292647EF00F020FC /* Keys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

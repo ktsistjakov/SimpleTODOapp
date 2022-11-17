@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B5622B4529263D9500F020FC /* SimpleTODOAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B4429263D9500F020FC /* SimpleTODOAppApp.swift */; };
+		B5622B4729263D9500F020FC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B4629263D9500F020FC /* Persistence.swift */; };
+		B5622B4A29263D9500F020FC /* SimpleTODOApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5622B4829263D9500F020FC /* SimpleTODOApp.xcdatamodeld */; };
+		B5622B4C29263D9500F020FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B4B29263D9500F020FC /* ContentView.swift */; };
+		B5622B4E29263D9700F020FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5622B4D29263D9700F020FC /* Assets.xcassets */; };
+		B5622B5229263D9700F020FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5622B5129263D9700F020FC /* Preview Assets.xcassets */; };
+		B5622B5C29263D9700F020FC /* SimpleTODOAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B5B29263D9700F020FC /* SimpleTODOAppTests.swift */; };
+		B5622B6629263D9700F020FC /* SimpleTODOAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B6529263D9700F020FC /* SimpleTODOAppUITests.swift */; };
+		B5622B6829263D9700F020FC /* SimpleTODOAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B6729263D9700F020FC /* SimpleTODOAppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5622B5829263D9700F020FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5622B3929263D9400F020FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5622B4029263D9400F020FC;
+			remoteInfo = SimpleTODOApp;
+		};
+		B5622B6229263D9700F020FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5622B3929263D9400F020FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5622B4029263D9400F020FC;
+			remoteInfo = SimpleTODOApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B5622B4129263D9400F020FC /* SimpleTODOApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTODOApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5622B4429263D9500F020FC /* SimpleTODOAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTODOAppApp.swift; sourceTree = "<group>"; };
+		B5622B4629263D9500F020FC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		B5622B4929263D9500F020FC /* SimpleTODOApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleTODOApp.xcdatamodel; sourceTree = "<group>"; };
+		B5622B4B29263D9500F020FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B5622B4D29263D9700F020FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5622B4F29263D9700F020FC /* SimpleTODOApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleTODOApp.entitlements; sourceTree = "<group>"; };
+		B5622B5129263D9700F020FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B5622B5729263D9700F020FC /* SimpleTODOAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleTODOAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5622B5B29263D9700F020FC /* SimpleTODOAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTODOAppTests.swift; sourceTree = "<group>"; };
+		B5622B6129263D9700F020FC /* SimpleTODOAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleTODOAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5622B6529263D9700F020FC /* SimpleTODOAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTODOAppUITests.swift; sourceTree = "<group>"; };
+		B5622B6729263D9700F020FC /* SimpleTODOAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTODOAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5622B3E29263D9400F020FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5622B5429263D9700F020FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5622B5E29263D9700F020FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B5622B3829263D9400F020FC = {
+			isa = PBXGroup;
+			children = (
+				B5622B4329263D9400F020FC /* SimpleTODOApp */,
+				B5622B5A29263D9700F020FC /* SimpleTODOAppTests */,
+				B5622B6429263D9700F020FC /* SimpleTODOAppUITests */,
+				B5622B4229263D9400F020FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B5622B4229263D9400F020FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5622B4129263D9400F020FC /* SimpleTODOApp.app */,
+				B5622B5729263D9700F020FC /* SimpleTODOAppTests.xctest */,
+				B5622B6129263D9700F020FC /* SimpleTODOAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5622B4329263D9400F020FC /* SimpleTODOApp */ = {
+			isa = PBXGroup;
+			children = (
+				B5622B4429263D9500F020FC /* SimpleTODOAppApp.swift */,
+				B5622B4629263D9500F020FC /* Persistence.swift */,
+				B5622B4B29263D9500F020FC /* ContentView.swift */,
+				B5622B4D29263D9700F020FC /* Assets.xcassets */,
+				B5622B4F29263D9700F020FC /* SimpleTODOApp.entitlements */,
+				B5622B4829263D9500F020FC /* SimpleTODOApp.xcdatamodeld */,
+				B5622B5029263D9700F020FC /* Preview Content */,
+			);
+			path = SimpleTODOApp;
+			sourceTree = "<group>";
+		};
+		B5622B5029263D9700F020FC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B5622B5129263D9700F020FC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B5622B5A29263D9700F020FC /* SimpleTODOAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				B5622B5B29263D9700F020FC /* SimpleTODOAppTests.swift */,
+			);
+			path = SimpleTODOAppTests;
+			sourceTree = "<group>";
+		};
+		B5622B6429263D9700F020FC /* SimpleTODOAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B5622B6529263D9700F020FC /* SimpleTODOAppUITests.swift */,
+				B5622B6729263D9700F020FC /* SimpleTODOAppUITestsLaunchTests.swift */,
+			);
+			path = SimpleTODOAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5622B4029263D9400F020FC /* SimpleTODOApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5622B6B29263D9700F020FC /* Build configuration list for PBXNativeTarget "SimpleTODOApp" */;
+			buildPhases = (
+				B5622B3D29263D9400F020FC /* Sources */,
+				B5622B3E29263D9400F020FC /* Frameworks */,
+				B5622B3F29263D9400F020FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleTODOApp;
+			productName = SimpleTODOApp;
+			productReference = B5622B4129263D9400F020FC /* SimpleTODOApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B5622B5629263D9700F020FC /* SimpleTODOAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5622B6E29263D9700F020FC /* Build configuration list for PBXNativeTarget "SimpleTODOAppTests" */;
+			buildPhases = (
+				B5622B5329263D9700F020FC /* Sources */,
+				B5622B5429263D9700F020FC /* Frameworks */,
+				B5622B5529263D9700F020FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5622B5929263D9700F020FC /* PBXTargetDependency */,
+			);
+			name = SimpleTODOAppTests;
+			productName = SimpleTODOAppTests;
+			productReference = B5622B5729263D9700F020FC /* SimpleTODOAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B5622B6029263D9700F020FC /* SimpleTODOAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5622B7129263D9700F020FC /* Build configuration list for PBXNativeTarget "SimpleTODOAppUITests" */;
+			buildPhases = (
+				B5622B5D29263D9700F020FC /* Sources */,
+				B5622B5E29263D9700F020FC /* Frameworks */,
+				B5622B5F29263D9700F020FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5622B6329263D9700F020FC /* PBXTargetDependency */,
+			);
+			name = SimpleTODOAppUITests;
+			productName = SimpleTODOAppUITests;
+			productReference = B5622B6129263D9700F020FC /* SimpleTODOAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5622B3929263D9400F020FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					B5622B4029263D9400F020FC = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					B5622B5629263D9700F020FC = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = B5622B4029263D9400F020FC;
+					};
+					B5622B6029263D9700F020FC = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = B5622B4029263D9400F020FC;
+					};
+				};
+			};
+			buildConfigurationList = B5622B3C29263D9400F020FC /* Build configuration list for PBXProject "SimpleTODOApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B5622B3829263D9400F020FC;
+			productRefGroup = B5622B4229263D9400F020FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5622B4029263D9400F020FC /* SimpleTODOApp */,
+				B5622B5629263D9700F020FC /* SimpleTODOAppTests */,
+				B5622B6029263D9700F020FC /* SimpleTODOAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5622B3F29263D9400F020FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5622B5229263D9700F020FC /* Preview Assets.xcassets in Resources */,
+				B5622B4E29263D9700F020FC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5622B5529263D9700F020FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5622B5F29263D9700F020FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5622B3D29263D9400F020FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5622B4529263D9500F020FC /* SimpleTODOAppApp.swift in Sources */,
+				B5622B4729263D9500F020FC /* Persistence.swift in Sources */,
+				B5622B4C29263D9500F020FC /* ContentView.swift in Sources */,
+				B5622B4A29263D9500F020FC /* SimpleTODOApp.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5622B5329263D9700F020FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5622B5C29263D9700F020FC /* SimpleTODOAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5622B5D29263D9700F020FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5622B6829263D9700F020FC /* SimpleTODOAppUITestsLaunchTests.swift in Sources */,
+				B5622B6629263D9700F020FC /* SimpleTODOAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5622B5929263D9700F020FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5622B4029263D9400F020FC /* SimpleTODOApp */;
+			targetProxy = B5622B5829263D9700F020FC /* PBXContainerItemProxy */;
+		};
+		B5622B6329263D9700F020FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5622B4029263D9400F020FC /* SimpleTODOApp */;
+			targetProxy = B5622B6229263D9700F020FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B5622B6929263D9700F020FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B5622B6A29263D9700F020FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		B5622B6C29263D9700F020FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SimpleTODOApp/SimpleTODOApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SimpleTODOApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ee.chippstudio.SimpleTODOApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5622B6D29263D9700F020FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SimpleTODOApp/SimpleTODOApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SimpleTODOApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ee.chippstudio.SimpleTODOApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B5622B6F29263D9700F020FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ee.chippstudio.SimpleTODOAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleTODOApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SimpleTODOApp";
+			};
+			name = Debug;
+		};
+		B5622B7029263D9700F020FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ee.chippstudio.SimpleTODOAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleTODOApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SimpleTODOApp";
+			};
+			name = Release;
+		};
+		B5622B7229263D9700F020FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ee.chippstudio.SimpleTODOAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SimpleTODOApp;
+			};
+			name = Debug;
+		};
+		B5622B7329263D9700F020FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ee.chippstudio.SimpleTODOAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SimpleTODOApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5622B3C29263D9400F020FC /* Build configuration list for PBXProject "SimpleTODOApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5622B6929263D9700F020FC /* Debug */,
+				B5622B6A29263D9700F020FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5622B6B29263D9700F020FC /* Build configuration list for PBXNativeTarget "SimpleTODOApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5622B6C29263D9700F020FC /* Debug */,
+				B5622B6D29263D9700F020FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5622B6E29263D9700F020FC /* Build configuration list for PBXNativeTarget "SimpleTODOAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5622B6F29263D9700F020FC /* Debug */,
+				B5622B7029263D9700F020FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5622B7129263D9700F020FC /* Build configuration list for PBXNativeTarget "SimpleTODOAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5622B7229263D9700F020FC /* Debug */,
+				B5622B7329263D9700F020FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B5622B4829263D9500F020FC /* SimpleTODOApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B5622B4929263D9500F020FC /* SimpleTODOApp.xcdatamodel */,
+			);
+			currentVersion = B5622B4929263D9500F020FC /* SimpleTODOApp.xcdatamodel */;
+			path = SimpleTODOApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B5622B3929263D9400F020FC /* Project object */;
+}

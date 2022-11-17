@@ -44,6 +44,10 @@ final class TodosInteractor: ObservableObject {
         todoStorageController.deleteTodo(id)
     }
 
+    func changeListTitle(_ title: String) {
+        todoStorageController.changeListTitle(title)
+    }
+
     private func subscribe() {
         $state
             .receive(on: DispatchQueue.main)

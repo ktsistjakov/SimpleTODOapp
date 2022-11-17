@@ -24,24 +24,22 @@ struct ListsRootView: View {
                 )
             }
         } else {
-            NavigationSplitView {
+            NavigationView {
                 ListsView(
                     interactor: ListsInteractor(
                         listsStorageController: ListsStorageControllerImpl()
                     )
                 )
-            } detail: {
                 Text("Select list")
             }
         }
 #else
-        NavigationSplitView {
+        NavigationView {
             ListsView(
                 interactor: ListsInteractor(
                     listsStorageController: ListsStorageControllerImpl()
                 )
             )
-        } detail: {
             Text("Select list")
         }
 #endif

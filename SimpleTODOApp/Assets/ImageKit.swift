@@ -13,6 +13,7 @@ enum ImageKit {
     }
 
     enum Todos {
+        static let more = "ellipsis.circle"
         static let add = "plus.circle"
         static let done = "checkmark.square"
         static let emptyMark = "square"

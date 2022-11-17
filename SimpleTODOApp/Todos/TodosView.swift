@@ -23,6 +23,8 @@ struct TodosView: View {
 
     @StateObject var interactor: TodosInteractor
 
+    @State var showEditTitleAlert: Bool = false
+
     var body: some View {
         List {
             if !interactor.state.todo.isEmpty {
@@ -70,8 +72,29 @@ struct TodosView: View {
                 } label: {
                     ImageKit.Todos.add.systemImage
                 }
+                .keyboardShortcut("n", modifiers: [.command])
             }
+
+            #if os(macOS)
+            ToolbarItem(placement: .primaryAction) {
+                Button {
+                    showEditTitleAlert.toggle()
+                } label: {
+                    ImageKit.Todos.more.systemImage
+                }
+            }
+            #endif
         }
+        .sheet(isPresented: $showEditTitleAlert) {
+            ChangeListTitleView(
+                title: interactor.state.listTitle) {
+                    showEditTitleAlert.toggle()
+                } changeTitleAction: { title in
+                    interactor.changeListTitle(title)
+                }
+
+        }
+
     }
 }
 
@@ -88,6 +111,7 @@ private struct TodoView: View {
             } label: {
                 ImageKit.Todos.emptyMark.systemImage
             }
+            .buttonStyle(.plain)
 
             TextField("Enter Todo", text: $title)
                 .onChange(of: title) { newValue in
@@ -108,6 +132,7 @@ private struct TodoDoneView: View {
             } label: {
                 ImageKit.Todos.done.systemImage
             }
+            .buttonStyle(.plain)
 
             if title.isEmpty {
                 Text("Untitled todo")
@@ -119,6 +144,33 @@ private struct TodoDoneView: View {
                     .strikethrough()
             }
         }
+    }
+}
+
+private struct ChangeListTitleView: View {
+    @State var title: String
+    var doneAction: () -> Void
+    var changeTitleAction: (_ title: String) -> Void
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            Text("Change list title")
+                .font(.title2.weight(.semibold))
+            TextField("Enter title", text: $title)
+            HStack(spacing: 8
+            ) {
+                Spacer()
+                Button("Cancel") {
+                    doneAction()
+                }
+                Button("Done") {
+                    doneAction()
+                    changeTitleAction(title)
+                }
+            }
+        }
+        .frame(minWidth: 520)
+        .padding(16)
     }
 }
 

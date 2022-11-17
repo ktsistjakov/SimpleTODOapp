@@ -8,8 +8,8 @@
 import SwiftUI
 import Combine
 
-struct ListsViewState {
-    struct List {
+struct ListsViewState: Hashable {
+    struct List: Hashable {
         let id: UUID
         let title: String
     }
@@ -23,7 +23,7 @@ struct ListsView: View {
     
     var body: some View {
         List {
-            ForEach(interactor.state.lists, id: \.id) { list in
+            ForEach(interactor.state.lists, id: \.self) { list in
                 NavigationLink {
                     TodosView(
                         interactor: TodosInteractor(
@@ -32,6 +32,13 @@ struct ListsView: View {
                     )
                 } label: {
                     Text(list.title)
+                }
+                .contextMenu {
+                    Button {
+                        interactor.deleteList(id: list.id)
+                    } label: {
+                        Text("Delete")
+                    }
                 }
             }
             .onDelete { indexSet in
@@ -47,6 +54,7 @@ struct ListsView: View {
                 } label: {
                     ImageKit.Lists.add.systemImage
                 }
+                .keyboardShortcut("n", modifiers: [.command, .shift])
             }
         }
     }

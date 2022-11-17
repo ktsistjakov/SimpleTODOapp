@@ -8,25 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		B5622B4529263D9500F020FC /* SimpleTODOAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B4429263D9500F020FC /* SimpleTODOAppApp.swift */; };
-		B5622B4729263D9500F020FC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B4629263D9500F020FC /* Persistence.swift */; };
 		B5622B4A29263D9500F020FC /* SimpleTODOApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5622B4829263D9500F020FC /* SimpleTODOApp.xcdatamodeld */; };
-		B5622B4C29263D9500F020FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B4B29263D9500F020FC /* ContentView.swift */; };
 		B5622B4E29263D9700F020FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5622B4D29263D9700F020FC /* Assets.xcassets */; };
 		B5622B5229263D9700F020FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5622B5129263D9700F020FC /* Preview Assets.xcassets */; };
 		B5622B5C29263D9700F020FC /* SimpleTODOAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B5B29263D9700F020FC /* SimpleTODOAppTests.swift */; };
-		B5622B6629263D9700F020FC /* SimpleTODOAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B6529263D9700F020FC /* SimpleTODOAppUITests.swift */; };
-		B5622B6829263D9700F020FC /* SimpleTODOAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B6729263D9700F020FC /* SimpleTODOAppUITestsLaunchTests.swift */; };
+		B5622B7A29263FEB00F020FC /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B7929263FEB00F020FC /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		B5622B5829263D9700F020FC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B5622B3929263D9400F020FC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B5622B4029263D9400F020FC;
-			remoteInfo = SimpleTODOApp;
-		};
-		B5622B6229263D9700F020FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B5622B3929263D9400F020FC /* Project object */;
 			proxyType = 1;
@@ -38,17 +28,13 @@
 /* Begin PBXFileReference section */
 		B5622B4129263D9400F020FC /* SimpleTODOApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTODOApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5622B4429263D9500F020FC /* SimpleTODOAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTODOAppApp.swift; sourceTree = "<group>"; };
-		B5622B4629263D9500F020FC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		B5622B4929263D9500F020FC /* SimpleTODOApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleTODOApp.xcdatamodel; sourceTree = "<group>"; };
-		B5622B4B29263D9500F020FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B5622B4D29263D9700F020FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5622B4F29263D9700F020FC /* SimpleTODOApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleTODOApp.entitlements; sourceTree = "<group>"; };
 		B5622B5129263D9700F020FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B5622B5729263D9700F020FC /* SimpleTODOAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleTODOAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5622B5B29263D9700F020FC /* SimpleTODOAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTODOAppTests.swift; sourceTree = "<group>"; };
-		B5622B6129263D9700F020FC /* SimpleTODOAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleTODOAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5622B6529263D9700F020FC /* SimpleTODOAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTODOAppUITests.swift; sourceTree = "<group>"; };
-		B5622B6729263D9700F020FC /* SimpleTODOAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTODOAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B5622B7929263FEB00F020FC /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +52,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B5622B5E29263D9700F020FC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,7 +60,6 @@
 			children = (
 				B5622B4329263D9400F020FC /* SimpleTODOApp */,
 				B5622B5A29263D9700F020FC /* SimpleTODOAppTests */,
-				B5622B6429263D9700F020FC /* SimpleTODOAppUITests */,
 				B5622B4229263D9400F020FC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +69,6 @@
 			children = (
 				B5622B4129263D9400F020FC /* SimpleTODOApp.app */,
 				B5622B5729263D9700F020FC /* SimpleTODOAppTests.xctest */,
-				B5622B6129263D9700F020FC /* SimpleTODOAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,11 +77,11 @@
 			isa = PBXGroup;
 			children = (
 				B5622B4429263D9500F020FC /* SimpleTODOAppApp.swift */,
-				B5622B4629263D9500F020FC /* Persistence.swift */,
-				B5622B4B29263D9500F020FC /* ContentView.swift */,
-				B5622B4D29263D9700F020FC /* Assets.xcassets */,
-				B5622B4F29263D9700F020FC /* SimpleTODOApp.entitlements */,
-				B5622B4829263D9500F020FC /* SimpleTODOApp.xcdatamodeld */,
+				B5622B7929263FEB00F020FC /* ListView.swift */,
+				B5622B7B2926402500F020FC /* Storage */,
+				B5622B7429263F5500F020FC /* Model */,
+				B5622B7629263F9000F020FC /* Support */,
+				B5622B7529263F7800F020FC /* Assets */,
 				B5622B5029263D9700F020FC /* Preview Content */,
 			);
 			path = SimpleTODOApp;
@@ -126,13 +103,35 @@
 			path = SimpleTODOAppTests;
 			sourceTree = "<group>";
 		};
-		B5622B6429263D9700F020FC /* SimpleTODOAppUITests */ = {
+		B5622B7429263F5500F020FC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B5622B6529263D9700F020FC /* SimpleTODOAppUITests.swift */,
-				B5622B6729263D9700F020FC /* SimpleTODOAppUITestsLaunchTests.swift */,
+				B5622B4829263D9500F020FC /* SimpleTODOApp.xcdatamodeld */,
 			);
-			path = SimpleTODOAppUITests;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B5622B7529263F7800F020FC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B5622B4D29263D9700F020FC /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		B5622B7629263F9000F020FC /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				B5622B4F29263D9700F020FC /* SimpleTODOApp.entitlements */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		B5622B7B2926402500F020FC /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,24 +172,6 @@
 			productReference = B5622B5729263D9700F020FC /* SimpleTODOAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B5622B6029263D9700F020FC /* SimpleTODOAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B5622B7129263D9700F020FC /* Build configuration list for PBXNativeTarget "SimpleTODOAppUITests" */;
-			buildPhases = (
-				B5622B5D29263D9700F020FC /* Sources */,
-				B5622B5E29263D9700F020FC /* Frameworks */,
-				B5622B5F29263D9700F020FC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B5622B6329263D9700F020FC /* PBXTargetDependency */,
-			);
-			name = SimpleTODOAppUITests;
-			productName = SimpleTODOAppUITests;
-			productReference = B5622B6129263D9700F020FC /* SimpleTODOAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,10 +186,6 @@
 						CreatedOnToolsVersion = 14.1;
 					};
 					B5622B5629263D9700F020FC = {
-						CreatedOnToolsVersion = 14.1;
-						TestTargetID = B5622B4029263D9400F020FC;
-					};
-					B5622B6029263D9700F020FC = {
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = B5622B4029263D9400F020FC;
 					};
@@ -229,7 +206,6 @@
 			targets = (
 				B5622B4029263D9400F020FC /* SimpleTODOApp */,
 				B5622B5629263D9700F020FC /* SimpleTODOAppTests */,
-				B5622B6029263D9700F020FC /* SimpleTODOAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -251,13 +227,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B5622B5F29263D9700F020FC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -266,9 +235,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5622B4529263D9500F020FC /* SimpleTODOAppApp.swift in Sources */,
-				B5622B4729263D9500F020FC /* Persistence.swift in Sources */,
-				B5622B4C29263D9500F020FC /* ContentView.swift in Sources */,
 				B5622B4A29263D9500F020FC /* SimpleTODOApp.xcdatamodeld in Sources */,
+				B5622B7A29263FEB00F020FC /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,15 +248,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B5622B5D29263D9700F020FC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B5622B6829263D9700F020FC /* SimpleTODOAppUITestsLaunchTests.swift in Sources */,
-				B5622B6629263D9700F020FC /* SimpleTODOAppUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -296,11 +255,6 @@
 			isa = PBXTargetDependency;
 			target = B5622B4029263D9400F020FC /* SimpleTODOApp */;
 			targetProxy = B5622B5829263D9700F020FC /* PBXContainerItemProxy */;
-		};
-		B5622B6329263D9700F020FC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B5622B4029263D9400F020FC /* SimpleTODOApp */;
-			targetProxy = B5622B6229263D9700F020FC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -419,7 +373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = SimpleTODOApp/SimpleTODOApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = SimpleTODOApp/Support/SimpleTODOApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SimpleTODOApp/Preview Content\"";
@@ -455,7 +409,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = SimpleTODOApp/SimpleTODOApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = SimpleTODOApp/Support/SimpleTODOApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SimpleTODOApp/Preview Content\"";
@@ -530,48 +484,6 @@
 			};
 			name = Release;
 		};
-		B5622B7229263D9700F020FC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ee.chippstudio.SimpleTODOAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SimpleTODOApp;
-			};
-			name = Debug;
-		};
-		B5622B7329263D9700F020FC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ee.chippstudio.SimpleTODOAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SimpleTODOApp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -598,15 +510,6 @@
 			buildConfigurations = (
 				B5622B6F29263D9700F020FC /* Debug */,
 				B5622B7029263D9700F020FC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B5622B7129263D9700F020FC /* Build configuration list for PBXNativeTarget "SimpleTODOAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B5622B7229263D9700F020FC /* Debug */,
-				B5622B7329263D9700F020FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

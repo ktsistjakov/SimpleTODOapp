@@ -12,7 +12,7 @@
 		B5622B4E29263D9700F020FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5622B4D29263D9700F020FC /* Assets.xcassets */; };
 		B5622B5229263D9700F020FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5622B5129263D9700F020FC /* Preview Assets.xcassets */; };
 		B5622B5C29263D9700F020FC /* SimpleTODOAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B5B29263D9700F020FC /* SimpleTODOAppTests.swift */; };
-		B5622B7A29263FEB00F020FC /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B7929263FEB00F020FC /* ListView.swift */; };
+		B5622B7A29263FEB00F020FC /* ListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B7929263FEB00F020FC /* ListsView.swift */; };
 		B5622B7D2926461800F020FC /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B7C2926461800F020FC /* Storage.swift */; };
 		B5622B862926472700F020FC /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B802926472600F020FC /* Injected.swift */; };
 		B5622B872926472700F020FC /* InjectedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B812926472600F020FC /* InjectedValue.swift */; };
@@ -21,6 +21,11 @@
 		B5622B8A2926472700F020FC /* KeyValueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B852926472700F020FC /* KeyValueStore.swift */; };
 		B5622B8C292647EF00F020FC /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B8B292647EF00F020FC /* Keys.swift */; };
 		B5622B9029264AA300F020FC /* SettingsKeyValueStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B8F29264AA300F020FC /* SettingsKeyValueStorage.swift */; };
+		B5622B9329264D0F00F020FC /* ListsRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B9229264D0F00F020FC /* ListsRootView.swift */; };
+		B5622B9529264E3400F020FC /* ListsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B9429264E3400F020FC /* ListsInteractor.swift */; };
+		B5622B9829264EE200F020FC /* DIComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B9729264EE200F020FC /* DIComposition.swift */; };
+		B5622B9A2926530B00F020FC /* ImageKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B992926530B00F020FC /* ImageKit.swift */; };
+		B5622B9C2926565B00F020FC /* ListsStorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B9B2926565B00F020FC /* ListsStorageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +47,7 @@
 		B5622B5129263D9700F020FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B5622B5729263D9700F020FC /* SimpleTODOAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleTODOAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5622B5B29263D9700F020FC /* SimpleTODOAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTODOAppTests.swift; sourceTree = "<group>"; };
-		B5622B7929263FEB00F020FC /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		B5622B7929263FEB00F020FC /* ListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsView.swift; sourceTree = "<group>"; };
 		B5622B7C2926461800F020FC /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		B5622B802926472600F020FC /* Injected.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 		B5622B812926472600F020FC /* InjectedValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectedValue.swift; sourceTree = "<group>"; };
@@ -51,6 +56,11 @@
 		B5622B852926472700F020FC /* KeyValueStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueStore.swift; sourceTree = "<group>"; };
 		B5622B8B292647EF00F020FC /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		B5622B8F29264AA300F020FC /* SettingsKeyValueStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsKeyValueStorage.swift; sourceTree = "<group>"; };
+		B5622B9229264D0F00F020FC /* ListsRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsRootView.swift; sourceTree = "<group>"; };
+		B5622B9429264E3400F020FC /* ListsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsInteractor.swift; sourceTree = "<group>"; };
+		B5622B9729264EE200F020FC /* DIComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIComposition.swift; sourceTree = "<group>"; };
+		B5622B992926530B00F020FC /* ImageKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageKit.swift; sourceTree = "<group>"; };
+		B5622B9B2926565B00F020FC /* ListsStorageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsStorageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,9 +102,9 @@
 		B5622B4329263D9400F020FC /* SimpleTODOApp */ = {
 			isa = PBXGroup;
 			children = (
-				B5622B8D29264A8000F020FC /* Settings */,
 				B5622B4429263D9500F020FC /* SimpleTODOAppApp.swift */,
-				B5622B7929263FEB00F020FC /* ListView.swift */,
+				B5622B9129264CCD00F020FC /* List */,
+				B5622B8D29264A8000F020FC /* Settings */,
 				B5622B7B2926402500F020FC /* Storage */,
 				B5622B7629263F9000F020FC /* Support */,
 				B5622B7E2926470500F020FC /* Common */,
@@ -124,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				B5622B4D29263D9700F020FC /* Assets.xcassets */,
+				B5622B992926530B00F020FC /* ImageKit.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -149,20 +160,21 @@
 		B5622B7E2926470500F020FC /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				B5622B7F2926472600F020FC /* Dependency */,
+				B5622B9629264EAF00F020FC /* Composition */,
+				B5622B7F2926472600F020FC /* DI */,
 				B5622B832926472700F020FC /* KeyValueStore */,
 			);
 			path = Common;
 			sourceTree = "<group>";
 		};
-		B5622B7F2926472600F020FC /* Dependency */ = {
+		B5622B7F2926472600F020FC /* DI */ = {
 			isa = PBXGroup;
 			children = (
 				B5622B802926472600F020FC /* Injected.swift */,
 				B5622B812926472600F020FC /* InjectedValue.swift */,
 				B5622B822926472600F020FC /* InjectionKey.swift */,
 			);
-			path = Dependency;
+			path = DI;
 			sourceTree = "<group>";
 		};
 		B5622B832926472700F020FC /* KeyValueStore */ = {
@@ -188,6 +200,25 @@
 				B5622B8F29264AA300F020FC /* SettingsKeyValueStorage.swift */,
 			);
 			path = KeyValueStorage;
+			sourceTree = "<group>";
+		};
+		B5622B9129264CCD00F020FC /* List */ = {
+			isa = PBXGroup;
+			children = (
+				B5622B9229264D0F00F020FC /* ListsRootView.swift */,
+				B5622B7929263FEB00F020FC /* ListsView.swift */,
+				B5622B9429264E3400F020FC /* ListsInteractor.swift */,
+				B5622B9B2926565B00F020FC /* ListsStorageController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		B5622B9629264EAF00F020FC /* Composition */ = {
+			isa = PBXGroup;
+			children = (
+				B5622B9729264EE200F020FC /* DIComposition.swift */,
+			);
+			path = Composition;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,17 +321,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5622B9329264D0F00F020FC /* ListsRootView.swift in Sources */,
 				B5622B862926472700F020FC /* Injected.swift in Sources */,
 				B5622B4529263D9500F020FC /* SimpleTODOAppApp.swift in Sources */,
 				B5622B7D2926461800F020FC /* Storage.swift in Sources */,
 				B5622B4A29263D9500F020FC /* SimpleTODOApp.xcdatamodeld in Sources */,
 				B5622B892926472700F020FC /* UserDefaults.swift in Sources */,
 				B5622B882926472700F020FC /* InjectionKey.swift in Sources */,
-				B5622B7A29263FEB00F020FC /* ListView.swift in Sources */,
+				B5622B7A29263FEB00F020FC /* ListsView.swift in Sources */,
 				B5622B872926472700F020FC /* InjectedValue.swift in Sources */,
+				B5622B9829264EE200F020FC /* DIComposition.swift in Sources */,
 				B5622B8A2926472700F020FC /* KeyValueStore.swift in Sources */,
+				B5622B9529264E3400F020FC /* ListsInteractor.swift in Sources */,
+				B5622B9A2926530B00F020FC /* ImageKit.swift in Sources */,
 				B5622B9029264AA300F020FC /* SettingsKeyValueStorage.swift in Sources */,
 				B5622B8C292647EF00F020FC /* Keys.swift in Sources */,
+				B5622B9C2926565B00F020FC /* ListsStorageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

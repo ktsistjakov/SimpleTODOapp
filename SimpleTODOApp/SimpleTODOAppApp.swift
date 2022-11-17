@@ -12,7 +12,7 @@ struct SimpleTODOAppApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ListView()
+            ListsRootView()
         }
     }
 }

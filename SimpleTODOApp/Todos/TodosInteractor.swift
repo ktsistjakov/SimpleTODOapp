@@ -28,6 +28,18 @@ final class TodosInteractor: ObservableObject {
         subscribe()
     }
 
+    func addTodo() {
+        todoStorageController.addTodo()
+    }
+
+    func toggleTodo(_ id: UUID) {
+        todoStorageController.changeDoneStatus(id)
+    }
+
+    func changeTitle(_ title: String, for id: UUID) {
+        todoStorageController.changeTitle(title, for: id)
+    }
+
     private func subscribe() {
         $state
             .receive(on: DispatchQueue.main)

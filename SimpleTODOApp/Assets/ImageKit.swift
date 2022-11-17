@@ -11,6 +11,12 @@ enum ImageKit {
     enum Lists {
         static let add = "plus.circle"
     }
+
+    enum Todos {
+        static let add = "plus.circle"
+        static let done = "checkmark.square"
+        static let emptyMark = "square"
+    }
 }
 
 extension String {

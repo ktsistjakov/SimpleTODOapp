@@ -22,6 +22,7 @@ protocol TodosStorageController {
     func addTodo()
     func deleteTodo(_ id: UUID)
     func changeTitle(_ title: String, for todoId: UUID)
+    func changeDoneStatus(_ id: UUID)
 }
 
 final class TodosStorageControllerImpl: NSObject, TodosStorageController {
@@ -89,6 +90,14 @@ final class TodosStorageControllerImpl: NSObject, TodosStorageController {
         guard let todo = todosObject.first(where: { $0.id == todoId }) else { return }
 
         todo.title = title
+
+        storage.saveContext()
+    }
+
+    func changeDoneStatus(_ id: UUID) {
+        guard let todo = todosObject.first(where: { $0.id == id }) else { return }
+
+        todo.isDone.toggle()
 
         storage.saveContext()
     }

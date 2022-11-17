@@ -24,6 +24,18 @@ final class ListsInteractor: ObservableObject {
         fetchAndSubscribe()
     }
     
+    func openList(id: UUID) {
+        print("Open List")
+    }
+    
+    func addList() {
+        listsStorageController.addList()
+    }
+    
+    func deleteList(id: UUID) {
+        listsStorageController.deleteList(id: id)
+    }
+    
     private func fetchAndSubscribe() {
         listsStorageController.lists
             .receive(on: DispatchQueue.main)
@@ -40,13 +52,5 @@ final class ListsInteractor: ObservableObject {
             .store(in: &cancellable)
         
         listsStorageController.fetch()
-    }
-    
-    func addList() {
-        listsStorageController.addList()
-    }
-    
-    func deleteList(id: UUID) {
-        listsStorageController.deleteList(id: id)
     }
 }

@@ -8,14 +8,43 @@
 import SwiftUI
 
 struct ListsRootView: View {
+
+#if os(iOS)
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+#endif
+
     var body: some View {
-        NavigationStack {
+#if os(iOS)
+        if horizontalSizeClass == .compact {
+            NavigationStack {
+                ListsView(
+                    interactor: ListsInteractor(
+                        listsStorageController: ListsStorageControllerImpl()
+                    )
+                )
+            }
+        } else {
+            NavigationSplitView {
+                ListsView(
+                    interactor: ListsInteractor(
+                        listsStorageController: ListsStorageControllerImpl()
+                    )
+                )
+            } detail: {
+                Text("Select list")
+            }
+        }
+#else
+        NavigationSplitView {
             ListsView(
                 interactor: ListsInteractor(
                     listsStorageController: ListsStorageControllerImpl()
                 )
             )
+        } detail: {
+            Text("Select list")
         }
+#endif
     }
 }
 

@@ -22,8 +22,16 @@ struct ListsView: View {
     @StateObject var interactor: ListsInteractor
     
     var body: some View {
-        List(interactor.state.lists, id: \.id, rowContent: {
-            Text($0.title)
+        List(interactor.state.lists, id: \.id, rowContent: { list in
+            NavigationLink {
+                TodosView(
+                    interactor: TodosInteractor(
+                        todoStorageController: TodosStorageControllerImpl(listId: list.id)
+                    )
+                )
+            } label: {
+                Text(list.title)
+            }
         })
             .navigationTitle("Lists")
             .toolbar {

@@ -26,6 +26,9 @@
 		B5622B9829264EE200F020FC /* DIComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B9729264EE200F020FC /* DIComposition.swift */; };
 		B5622B9A2926530B00F020FC /* ImageKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B992926530B00F020FC /* ImageKit.swift */; };
 		B5622B9C2926565B00F020FC /* ListsStorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B9B2926565B00F020FC /* ListsStorageController.swift */; };
+		B5622B9F2926694300F020FC /* TodosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B9E2926694300F020FC /* TodosView.swift */; };
+		B5622BA1292673E900F020FC /* TodosInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622BA0292673E900F020FC /* TodosInteractor.swift */; };
+		B5622BA3292674FB00F020FC /* TodosStorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622BA2292674FB00F020FC /* TodosStorageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		B5622B9729264EE200F020FC /* DIComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIComposition.swift; sourceTree = "<group>"; };
 		B5622B992926530B00F020FC /* ImageKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageKit.swift; sourceTree = "<group>"; };
 		B5622B9B2926565B00F020FC /* ListsStorageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsStorageController.swift; sourceTree = "<group>"; };
+		B5622B9E2926694300F020FC /* TodosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosView.swift; sourceTree = "<group>"; };
+		B5622BA0292673E900F020FC /* TodosInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosInteractor.swift; sourceTree = "<group>"; };
+		B5622BA2292674FB00F020FC /* TodosStorageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosStorageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,7 @@
 			children = (
 				B5622B4429263D9500F020FC /* SimpleTODOAppApp.swift */,
 				B5622B9129264CCD00F020FC /* List */,
+				B5622B9D2926692600F020FC /* Todos */,
 				B5622B8D29264A8000F020FC /* Settings */,
 				B5622B7B2926402500F020FC /* Storage */,
 				B5622B7629263F9000F020FC /* Support */,
@@ -221,6 +228,16 @@
 			path = Composition;
 			sourceTree = "<group>";
 		};
+		B5622B9D2926692600F020FC /* Todos */ = {
+			isa = PBXGroup;
+			children = (
+				B5622B9E2926694300F020FC /* TodosView.swift */,
+				B5622BA0292673E900F020FC /* TodosInteractor.swift */,
+				B5622BA2292674FB00F020FC /* TodosStorageController.swift */,
+			);
+			path = Todos;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -324,12 +341,14 @@
 				B5622B9329264D0F00F020FC /* ListsRootView.swift in Sources */,
 				B5622B862926472700F020FC /* Injected.swift in Sources */,
 				B5622B4529263D9500F020FC /* SimpleTODOAppApp.swift in Sources */,
+				B5622B9F2926694300F020FC /* TodosView.swift in Sources */,
 				B5622B7D2926461800F020FC /* Storage.swift in Sources */,
 				B5622B4A29263D9500F020FC /* SimpleTODOApp.xcdatamodeld in Sources */,
 				B5622B892926472700F020FC /* UserDefaults.swift in Sources */,
 				B5622B882926472700F020FC /* InjectionKey.swift in Sources */,
 				B5622B7A29263FEB00F020FC /* ListsView.swift in Sources */,
 				B5622B872926472700F020FC /* InjectedValue.swift in Sources */,
+				B5622BA1292673E900F020FC /* TodosInteractor.swift in Sources */,
 				B5622B9829264EE200F020FC /* DIComposition.swift in Sources */,
 				B5622B8A2926472700F020FC /* KeyValueStore.swift in Sources */,
 				B5622B9529264E3400F020FC /* ListsInteractor.swift in Sources */,
@@ -337,6 +356,7 @@
 				B5622B9029264AA300F020FC /* SettingsKeyValueStorage.swift in Sources */,
 				B5622B8C292647EF00F020FC /* Keys.swift in Sources */,
 				B5622B9C2926565B00F020FC /* ListsStorageController.swift in Sources */,
+				B5622BA3292674FB00F020FC /* TodosStorageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

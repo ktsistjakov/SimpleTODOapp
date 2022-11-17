@@ -97,8 +97,8 @@ extension ListsStorageControllerImpl: NSFetchedResultsControllerDelegate {
 private extension TodoList {
     var model: TodoListModel {
         TodoListModel(
-            id: self.id ?? UUID(),
-            title: self.title ?? "Undefined title"
+            id: id ?? UUID(),
+            title: title ?? "Undefined title"
         )
     }
 }

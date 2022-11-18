@@ -13,7 +13,6 @@ protocol Storage {
 final class StorageImpl: Storage {
 
     private let settingsStorage: SettingsKeyValueStorage
-    private var isPlusVersionEnabled: Bool = false
 
     private var iCloudEnabled: Bool = false
 
@@ -31,7 +30,7 @@ final class StorageImpl: Storage {
 
     func reloadContainer() {
         saveContext()
-        if iCloudEnabled != settingsStorage.iCloudSyncEnable && isPlusVersionEnabled {
+        if iCloudEnabled != settingsStorage.iCloudSyncEnable {
             persistentContainer = setupContainer()
         }
     }
@@ -42,7 +41,7 @@ final class StorageImpl: Storage {
     }()
 
     private func setupContainer() -> NSPersistentContainer {
-        iCloudEnabled = settingsStorage.iCloudSyncEnable && isPlusVersionEnabled
+        iCloudEnabled = settingsStorage.iCloudSyncEnable
         let container: NSPersistentContainer
         if iCloudEnabled {
             container = NSPersistentCloudKitContainer(name: "SimpleTODOApp")

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5522CF029279FEF00617F5D /* AppDelegate_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5522CEF29279FEF00617F5D /* AppDelegate_iOS.swift */; };
+		B5522CF22927A0B800617F5D /* AppDelegate_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5522CF12927A0B800617F5D /* AppDelegate_macOS.swift */; };
 		B5622B4529263D9500F020FC /* SimpleTODOAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B4429263D9500F020FC /* SimpleTODOAppApp.swift */; };
 		B5622B4A29263D9500F020FC /* SimpleTODOApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5622B4829263D9500F020FC /* SimpleTODOApp.xcdatamodeld */; };
 		B5622B4E29263D9700F020FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5622B4D29263D9700F020FC /* Assets.xcassets */; };
@@ -43,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B5522CED29279B2F00617F5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5522CEF29279FEF00617F5D /* AppDelegate_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate_iOS.swift; sourceTree = "<group>"; };
+		B5522CF12927A0B800617F5D /* AppDelegate_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate_macOS.swift; sourceTree = "<group>"; };
 		B5622B4129263D9400F020FC /* SimpleTODOApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTODOApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5622B4429263D9500F020FC /* SimpleTODOAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTODOAppApp.swift; sourceTree = "<group>"; };
 		B5622B4929263D9500F020FC /* SimpleTODOApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleTODOApp.xcdatamodel; sourceTree = "<group>"; };
@@ -89,6 +94,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B5522CEE29279FCE00617F5D /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				B5522CF12927A0B800617F5D /* AppDelegate_macOS.swift */,
+				B5522CEF29279FEF00617F5D /* AppDelegate_iOS.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
 		B5622B3829263D9400F020FC = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +124,7 @@
 		B5622B4329263D9400F020FC /* SimpleTODOApp */ = {
 			isa = PBXGroup;
 			children = (
+				B5522CEE29279FCE00617F5D /* AppDelegate */,
 				B5622B4429263D9500F020FC /* SimpleTODOAppApp.swift */,
 				B5622B9129264CCD00F020FC /* List */,
 				B5622B9D2926692600F020FC /* Todos */,
@@ -151,6 +166,7 @@
 		B5622B7629263F9000F020FC /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				B5522CED29279B2F00617F5D /* Info.plist */,
 				B5622B4F29263D9700F020FC /* SimpleTODOApp.entitlements */,
 				B5622B8B292647EF00F020FC /* Keys.swift */,
 			);
@@ -345,6 +361,7 @@
 				B5622B862926472700F020FC /* Injected.swift in Sources */,
 				B5622B4529263D9500F020FC /* SimpleTODOAppApp.swift in Sources */,
 				B5622B9F2926694300F020FC /* TodosView.swift in Sources */,
+				B5522CF22927A0B800617F5D /* AppDelegate_macOS.swift in Sources */,
 				B5622B7D2926461800F020FC /* Storage.swift in Sources */,
 				B5622B4A29263D9500F020FC /* SimpleTODOApp.xcdatamodeld in Sources */,
 				B5622B892926472700F020FC /* UserDefaults.swift in Sources */,
@@ -359,6 +376,7 @@
 				B5622BA529277C7E00F020FC /* Constants.swift in Sources */,
 				B5622B9029264AA300F020FC /* SettingsKeyValueStorage.swift in Sources */,
 				B5622B8C292647EF00F020FC /* Keys.swift in Sources */,
+				B5522CF029279FEF00617F5D /* AppDelegate_iOS.swift in Sources */,
 				B5622B9C2926565B00F020FC /* ListsStorageController.swift in Sources */,
 				B5622BA3292674FB00F020FC /* TodosStorageController.swift in Sources */,
 			);
@@ -498,11 +516,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SimpleTODOApp/Support/SimpleTODOApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SimpleTODOApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 7H73NQ5KRA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleTODOApp/Support/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -513,13 +534,14 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ee.chippstudio.SimpleTODOApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -534,11 +556,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SimpleTODOApp/Support/SimpleTODOApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SimpleTODOApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 7H73NQ5KRA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleTODOApp/Support/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -549,13 +574,14 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ee.chippstudio.SimpleTODOApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;

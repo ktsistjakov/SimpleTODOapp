@@ -19,7 +19,8 @@ struct ListsRootView: View {
             NavigationStack {
                 ListsView(
                     interactor: ListsInteractor(
-                        listsStorageController: ListsStorageControllerImpl()
+                        listsStorageController: ListsStorageControllerImpl(),
+                        settingsKeyValueStorage: SettingsKeyValueStorage(store: UserDefaults.standard)
                     )
                 )
             }
@@ -27,7 +28,8 @@ struct ListsRootView: View {
             NavigationView {
                 ListsView(
                     interactor: ListsInteractor(
-                        listsStorageController: ListsStorageControllerImpl()
+                        listsStorageController: ListsStorageControllerImpl(),
+                        settingsKeyValueStorage: SettingsKeyValueStorage(store: UserDefaults.standard)
                     )
                 )
                 Text("Select list")
@@ -37,7 +39,8 @@ struct ListsRootView: View {
         NavigationView {
             ListsView(
                 interactor: ListsInteractor(
-                    listsStorageController: ListsStorageControllerImpl()
+                    listsStorageController: ListsStorageControllerImpl(),
+                    settingsKeyValueStorage: SettingsKeyValueStorage(store: UserDefaults.standard)
                 )
             )
             Text("Select list")

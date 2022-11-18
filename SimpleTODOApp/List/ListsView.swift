@@ -15,6 +15,7 @@ struct ListsViewState: Hashable {
     }
     
     var lists: [List]
+    var enableiCloudSync: Bool
 }
 
 struct ListsView: View {
@@ -22,33 +23,39 @@ struct ListsView: View {
     @StateObject var interactor: ListsInteractor
     
     var body: some View {
-        List {
-            ForEach(interactor.state.lists, id: \.self) { list in
-                NavigationLink {
-                    TodosView(
-                        interactor: TodosInteractor(
-                            todoStorageController: TodosStorageControllerImpl(listId: list.id)
+        VStack {
+            List {
+                ForEach(interactor.state.lists, id: \.self) { list in
+                    NavigationLink {
+                        TodosView(
+                            interactor: TodosInteractor(
+                                todoStorageController: TodosStorageControllerImpl(listId: list.id)
+                            )
                         )
-                    )
-                } label: {
-                    Text(list.title)
-                }
-                .contextMenu {
-                    Button {
-                        interactor.deleteList(id: list.id)
                     } label: {
-                        Text("Delete")
+                        Text(list.title)
+                    }
+                    .contextMenu {
+                        Button {
+                            interactor.deleteList(id: list.id)
+                        } label: {
+                            Text("Delete")
+                        }
                     }
                 }
+                .onDelete { indexSet in
+                    guard let index = indexSet.first else { return }
+                    interactor.deleteList(id: interactor.state.lists[index].id)
+                }
+                .onMove { from, to in
+                    guard let fromIndex = from.first else { return }
+                    interactor.move(fromIndex: fromIndex, toIndex: to)
+                }
             }
-            .onDelete { indexSet in
-                guard let index = indexSet.first else { return }
-                interactor.deleteList(id: interactor.state.lists[index].id)
-            }
-            .onMove { from, to in
-                guard let fromIndex = from.first else { return }
-                interactor.move(fromIndex: fromIndex, toIndex: to)
-            }
+            #if os(macOS)
+            Toggle("Enable iCloud sync", isOn: $interactor.state.enableiCloudSync)
+                .padding()
+            #endif
         }
         .navigationTitle("Lists")
         .toolbar {
@@ -60,6 +67,12 @@ struct ListsView: View {
                 }
                 .keyboardShortcut("n", modifiers: [.command, .shift])
             }
+
+            #if os(iOS)
+            ToolbarItem(placement: .bottomBar) {
+                Toggle("Enable iCloud sync", isOn: $interactor.state.enableiCloudSync)
+            }
+            #endif
         }
     }
 }
@@ -87,7 +100,7 @@ struct ListView_Previews: PreviewProvider {
                         TodoListModel(id: UUID(), title: "First list"),
                         TodoListModel(id: UUID(), title: "Second list"),
                     ]
-                )
+                ), settingsKeyValueStorage: SettingsKeyValueStorage(store: UserDefaults.standard)
             )
         )
     }

@@ -5,6 +5,7 @@
 //  Created by Konstantin Tsistjakov on 18.11.2022.
 //
 
+#if os(iOS)
 import UIKit
 
 class AppDelegate: NSObject, UIApplicationDelegate {
@@ -24,3 +25,4 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     ) {
     }
 }
+#endif

@@ -48,6 +48,10 @@ final class TodosInteractor: ObservableObject {
         todoStorageController.changeListTitle(title)
     }
 
+    func move(fromIndex: Int, toIndex: Int) {
+        todoStorageController.move(fromIndex: fromIndex, toIndex: toIndex)
+    }
+
     private func subscribe() {
         $state
             .receive(on: DispatchQueue.main)

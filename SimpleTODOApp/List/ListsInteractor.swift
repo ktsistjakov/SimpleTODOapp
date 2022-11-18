@@ -35,6 +35,10 @@ final class ListsInteractor: ObservableObject {
     func deleteList(id: UUID) {
         listsStorageController.deleteList(id: id)
     }
+
+    func move(fromIndex: Int, toIndex: Int) {
+        listsStorageController.move(fromIndex: fromIndex, toIndex: toIndex)
+    }
     
     private func fetchAndSubscribe() {
         listsStorageController.lists

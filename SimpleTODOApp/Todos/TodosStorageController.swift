@@ -20,6 +20,7 @@ protocol TodosStorageController {
     var listTitle: String { get }
     func changeListTitle(_ title: String)
     func addTodo()
+    func move(fromIndex: Int, toIndex: Int)
     func deleteTodo(_ id: UUID)
     func changeTitle(_ title: String, for todoId: UUID)
     func changeDoneStatus(_ id: UUID)
@@ -68,11 +69,23 @@ final class TodosStorageControllerImpl: NSObject, TodosStorageController {
         todo.isDone = false
         todo.id = UUID()
         todo.title = ""
+        todo.displayOrder = Int16(todosObject.count) * storageDisplayOrderOffset
 
         listObject.addToTodos(todo)
 
         storage.saveContext()
 
+    }
+
+    func move(fromIndex: Int, toIndex: Int) {
+        guard fromIndex != toIndex else { return }
+        var unFinished = todosObject.filter { $0.isDone == false }
+        unFinished.move(fromOffsets: [fromIndex], toOffset: toIndex)
+
+        unFinished.enumerated().forEach {
+            $0.element.displayOrder = Int16($0.offset) * storageDisplayOrderOffset
+        }
+        storage.saveContext()
     }
 
     func deleteTodo(_ id: UUID) {
@@ -122,7 +135,7 @@ final class TodosStorageControllerImpl: NSObject, TodosStorageController {
         let request = Todo.fetchRequest()
         request.predicate = NSPredicate(format: "list.id=%@", listId as CVarArg)
 
-        request.sortDescriptors = [NSSortDescriptor(key: "isDone", ascending: false)]
+        request.sortDescriptors = [NSSortDescriptor(key: "displayOrder", ascending: true)]
 
         todosFetchResultController = NSFetchedResultsController(
             fetchRequest: request,

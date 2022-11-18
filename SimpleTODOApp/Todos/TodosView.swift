@@ -40,6 +40,10 @@ struct TodosView: View {
                         guard let index = indexSet.first else { return }
                         interactor.deleteItem(by: interactor.state.todo[index].id)
                     }
+                    .onMove { from, to in
+                        guard let fromIndex = from.first else { return }
+                        interactor.move(fromIndex: fromIndex, toIndex: to)
+                    }
                 }
             }
 
@@ -185,6 +189,7 @@ struct TodosView_Previews: PreviewProvider {
         func changeListTitle(_ title: String) {}
         func addTodo() {}
         func deleteTodo(_ id: UUID) {}
+        func move(fromIndex: Int, toIndex: Int) {}
         func changeTitle(_ title: String, for todoId: UUID) {}
         func changeDoneStatus(_ id: UUID) {}
 

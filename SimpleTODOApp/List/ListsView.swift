@@ -45,6 +45,10 @@ struct ListsView: View {
                 guard let index = indexSet.first else { return }
                 interactor.deleteList(id: interactor.state.lists[index].id)
             }
+            .onMove { from, to in
+                guard let fromIndex = from.first else { return }
+                interactor.move(fromIndex: fromIndex, toIndex: to)
+            }
         }
         .navigationTitle("Lists")
         .toolbar {
@@ -68,6 +72,7 @@ struct ListView_Previews: PreviewProvider {
         }
         func fetch() {}
         func addList() {}
+        func move(fromIndex: Int, toIndex: Int) {}
         func deleteList(id: UUID) {}
         
         init(model: [TodoListModel]) {

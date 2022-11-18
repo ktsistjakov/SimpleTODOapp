@@ -18,6 +18,7 @@ protocol ListsStorageController {
     var lists: AnyPublisher<[TodoListModel], Never> { get }
     func fetch()
     func addList()
+    func move(fromIndex: Int, toIndex: Int)
     func deleteList(id: UUID)
 }
 
@@ -43,9 +44,21 @@ final class ListsStorageControllerImpl: NSObject, ListsStorageController {
         let list = TodoList(context: storage.context)
         list.title = "Default List"
         list.id = UUID()
+        list.displayOrder = Int16(listsObjects.count) * storageDisplayOrderOffset
         
         storage.context.insert(list)
         
+        storage.saveContext()
+    }
+
+    func move(fromIndex: Int, toIndex: Int) {
+        guard fromIndex != toIndex else { return }
+
+        listsObjects.move(fromOffsets: [fromIndex], toOffset: toIndex)
+
+        listsObjects.enumerated().forEach {
+            $0.element.displayOrder = Int16($0.offset) * storageDisplayOrderOffset
+        }
         storage.saveContext()
     }
     
@@ -60,7 +73,7 @@ final class ListsStorageControllerImpl: NSObject, ListsStorageController {
         let request = TodoList.fetchRequest()
         
         // Here we can use custom sort descriptions for lists
-        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: false)]
+        request.sortDescriptors = [NSSortDescriptor(key: "displayOrder", ascending: true)]
         
         listsResultController = NSFetchedResultsController(
             fetchRequest: request,

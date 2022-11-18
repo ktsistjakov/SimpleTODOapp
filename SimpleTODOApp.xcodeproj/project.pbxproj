@@ -29,6 +29,7 @@
 		B5622B9F2926694300F020FC /* TodosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622B9E2926694300F020FC /* TodosView.swift */; };
 		B5622BA1292673E900F020FC /* TodosInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622BA0292673E900F020FC /* TodosInteractor.swift */; };
 		B5622BA3292674FB00F020FC /* TodosStorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622BA2292674FB00F020FC /* TodosStorageController.swift */; };
+		B5622BA529277C7E00F020FC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5622BA429277C7E00F020FC /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		B5622B9E2926694300F020FC /* TodosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosView.swift; sourceTree = "<group>"; };
 		B5622BA0292673E900F020FC /* TodosInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosInteractor.swift; sourceTree = "<group>"; };
 		B5622BA2292674FB00F020FC /* TodosStorageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosStorageController.swift; sourceTree = "<group>"; };
+		B5622BA429277C7E00F020FC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 		B5622B7B2926402500F020FC /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				B5622BA429277C7E00F020FC /* Constants.swift */,
 				B5622B7C2926461800F020FC /* Storage.swift */,
 				B5622B4829263D9500F020FC /* SimpleTODOApp.xcdatamodeld */,
 			);
@@ -353,6 +356,7 @@
 				B5622B8A2926472700F020FC /* KeyValueStore.swift in Sources */,
 				B5622B9529264E3400F020FC /* ListsInteractor.swift in Sources */,
 				B5622B9A2926530B00F020FC /* ImageKit.swift in Sources */,
+				B5622BA529277C7E00F020FC /* Constants.swift in Sources */,
 				B5622B9029264AA300F020FC /* SettingsKeyValueStorage.swift in Sources */,
 				B5622B8C292647EF00F020FC /* Keys.swift in Sources */,
 				B5622B9C2926565B00F020FC /* ListsStorageController.swift in Sources */,

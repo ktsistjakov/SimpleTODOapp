@@ -59,6 +59,13 @@ final class ListsInteractor: ObservableObject {
                 self?.storage.reloadContainer()
             }
             .store(in: &cancellable)
+
+        NotificationCenter.default.publisher(for: .storageDidReloadNotification)
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.listsStorageController.refetch()
+            }
+            .store(in: &cancellable)
     }
     
     private func fetchAndSubscribe() {

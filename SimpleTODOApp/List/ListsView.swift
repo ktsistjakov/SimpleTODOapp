@@ -83,6 +83,7 @@ struct ListView_Previews: PreviewProvider {
         var lists: AnyPublisher<[TodoListModel], Never> {
             $model.eraseToAnyPublisher()
         }
+        func refetch() {}
         func fetch() {}
         func addList() {}
         func move(fromIndex: Int, toIndex: Int) {}

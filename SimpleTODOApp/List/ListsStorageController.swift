@@ -17,6 +17,7 @@ struct TodoListModel {
 protocol ListsStorageController {
     var lists: AnyPublisher<[TodoListModel], Never> { get }
     func fetch()
+    func refetch()
     func addList()
     func move(fromIndex: Int, toIndex: Int)
     func deleteList(id: UUID)
@@ -65,6 +66,11 @@ final class ListsStorageControllerImpl: NSObject, ListsStorageController {
     func deleteList(id: UUID) {
         guard let list = listsObjects.first(where: { $0.id == id}) else { return }
         storage.context.delete(list)
+    }
+
+    func refetch() {
+        listsResultController = nil
+        fetch()
     }
     
     func fetch() {

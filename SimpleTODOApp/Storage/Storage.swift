@@ -4,6 +4,10 @@ import Foundation
 import CoreData
 import Combine
 
+extension Notification.Name {
+    static let storageDidReloadNotification = Notification.Name(rawValue: "storageDidReloadNotification")
+}
+
 protocol Storage {
     var context: NSManagedObjectContext { get }
     func saveContext()
@@ -32,6 +36,7 @@ final class StorageImpl: Storage {
         saveContext()
         if iCloudEnabled != settingsStorage.iCloudSyncEnable {
             persistentContainer = setupContainer()
+            NotificationCenter.default.post(name: .storageDidReloadNotification, object: nil)
         }
     }
 
